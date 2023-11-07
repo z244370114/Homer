@@ -32,6 +32,12 @@ class SettingActivity : BaseActivity<ActivitySettingBinding>() {
                 val intent = Intent(this@SettingActivity, LogListActivity::class.java)
                 startActivity(intent)
             }
+            tvUserAgreement.setOnClickListener {
+
+            }
+            tvPrivacyAgreement.setOnClickListener {
+
+            }
         }
     }
 }

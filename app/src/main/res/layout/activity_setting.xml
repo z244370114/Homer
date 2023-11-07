@@ -39,4 +39,26 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDelete" />
 
 
+    <Button
+        android:id="@+id/tvUserAgreement"
+        style="@style/TextView_Menu"
+        android:layout_marginTop="0.5dp"
+        android:text="用户协议"
+        app:drawableStartCompat="@drawable/icon_user_agreement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLog" />
+
+
+    <Button
+        android:id="@+id/tvPrivacyAgreement"
+        style="@style/TextView_Menu"
+        android:layout_marginTop="0.5dp"
+        android:text="隐私协议"
+        app:drawableStartCompat="@drawable/icon_privacy_agreement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserAgreement" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
