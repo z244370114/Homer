@@ -4,7 +4,7 @@ package com.demon.apport.data
  * Created by masel on 2016/10/10.
  */
 object Constants {
-    const val HTTP_PORT = 12345
+    const val HTTP_PORT = 1234
 
 
     const val WIFI_CONNECT_CHANGE_EVENT = "WIFI CONNECT CHANGE EVENT"
