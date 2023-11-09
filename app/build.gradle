@@ -4,27 +4,44 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.wifi.transmit"
         minSdk 21
-        targetSdk 32
-        versionCode 1
+        targetSdk 33
+        versionCode 3
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        config {//签名配置
+            storeFile file("../wifitransmit.jks")
+            keyAlias "wifitransmitalias"
+            storePassword "wifitransmit"
+            keyPassword "wifitransmit"
+        }
+    }
     
     buildTypes {
         release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
             minifyEnabled false
+//            shrinkResources true
+            zipAlignEnabled true
+            signingConfig signingConfigs.config
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            signingConfig signingConfigs.config
         }
     }
+
+
+
 
     buildFeatures {
         viewBinding = true
